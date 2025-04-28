@@ -1,0 +1,277 @@
+:root {
+  --color-primario: #6c63ff;
+  --color-secundario: #ff6b6b;
+  --color-fondo: #f9f7ff;
+  --color-carta-trasera: #6c63ff;
+  --color-carta-frontal: #ffffff;
+  --color-texto: #333333;
+  --color-sombra: rgba(108, 99, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: var(--color-fondo);
+  padding: 20px;
+  background-image: radial-gradient(circle at 10% 20%, rgba(108, 99, 255, 0.1) 0%, rgba(255, 107, 107, 0.1) 90%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: var(--color-primario);
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.game-container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px var(--color-sombra);
+  max-width: 500px;
+  width: 100%;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 12px;
+  justify-content: center;
+  margin: 0 auto 20px;
+  max-width: 360px;
+}
+
+.card {
+  aspect-ratio: 1;
+  background-color: var(--color-carta-trasera);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  user-select: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card.flipped {
+  background-color: var(--color-carta-frontal);
+  color: var(--color-texto);
+  border: 2px solid var(--color-primario);
+  transform: rotateY(180deg);
+}
+
+.status-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primario);
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.restart-button {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px var(--color-sombra);
+}
+
+.restart-button:hover {
+  background-color: #5a52d5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--color-sombra);
+}
+
+.restart-button:active {
+  transform: translateY(0);
+}
+
+/* Animación para cuando se encuentra una pareja */
+@keyframes matched {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(0); }
+}
+
+.card.matched {
+  animation: matched 0.6s forwards;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .game-board {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+  }
+  
+  .card {
+    font-size: 1.5rem;
+  }
+  
+  .game-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Estilos para el mensaje de victoria */
+.win-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-fondo);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px var(--color-sombra);
+  z-index: 100;
+  width: 80%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+}
+
+.win-message h2 {
+  color: var(--color-primario);
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.win-message p {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.game-container {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px var(--color-sombra);
+  max-width: 500px;
+  width: 100%;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 12px;
+  justify-content: center;
+  margin: 0 auto 20px;
+  max-width: 360px;
+}
+
+.card {
+  aspect-ratio: 1;
+  background-color: var(--color-carta-trasera);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  user-select: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card.flipped {
+  background-color: var(--color-carta-frontal);
+  color: var(--color-texto);
+  border: 2px solid var(--color-primario);
+  transform: rotateY(180deg);
+}
+
+.status-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primario);
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.restart-button {
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px var(--color-sombra);
+}
+
+.restart-button:hover {
+  background-color: #5a52d5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--color-sombra);
+}
+
+.restart-button:active {
+  transform: translateY(0);
+}
+
+/* Animación para cuando se encuentra una pareja */
+@keyframes matched {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(0); }
+}
+
+.card.matched {
+  animation: matched 0.6s forwards;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .game-board {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+  }
+  
+  .card {
+    font-size: 1.5rem;
+  }
+  
+  .game-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}

@@ -1,0 +1,30 @@
+:root {
+  /* Colores principales */
+  --color-primario: #6c63ff;
+  --color-secundario: #ff6b6b;
+  --color-acento: #ffd166;
+  --color-fondo: #f9f7ff;
+  --color-texto: #333333;
+  --color-texto-claro: #666666;
+  --color-borde: #e0e0e0;
+  --color-sombra: rgba(108, 99, 255, 0.2);
+  
+  /* Tipografía */
+  --fuente-principal: 'Montserrat', sans-serif;
+  --fuente-titulos: 'Playfair Display', serif;
+  
+  /* Transiciones */
+  --transicion: all 0.3s ease;
+  
+  /* Espaciado */
+  --espaciado-s: 8px;
+  --espaciado-m: 16px;
+  --espaciado-l: 24px;
+  --espaciado-xl: 32px;
+  
+  /* Bordes y radios */
+  --radio-s: 4px;
+  --radio-m: 8px;
+  --radio-l: 16px;
+  --radio-xl: 24px;
+}

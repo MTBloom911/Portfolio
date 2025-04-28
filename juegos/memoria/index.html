@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoria</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Memoria</h1>
+    <p class="instructions">Encuentra todas las parejas de frutas para ganar</p>
+    
+    <div class="game-stats">
+      <div class="stat">
+        <span class="stat-label">Intentos:</span>
+        <span id="attempts">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Tiempo:</span>
+        <span id="timer">00:00</span>
+      </div>
+    </div>
+    
+    <div id="game-board" class="game-board"></div>
+    
+    <div id="status" class="status-message"></div>
+    
+    <button id="restart-btn" class="restart-button">Reiniciar Juego</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
