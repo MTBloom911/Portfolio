@@ -1,5 +1,5 @@
 :root {
-  /* Colores principales */
+  /* Colores principales - Modo claro */
   --color-primario: #6c63ff;
   --color-secundario: #ff6b6b;
   --color-acento: #ffd166;
@@ -27,4 +27,16 @@
   --radio-m: 8px;
   --radio-l: 16px;
   --radio-xl: 24px;
+}
+
+/* Modo oscuro */
+[data-theme="dark"] {
+  --color-primario: #8c83ff;
+  --color-secundario: #ff8b8b;
+  --color-acento: #ffe066;
+  --color-fondo: #121212;
+  --color-texto: #f0f0f0;
+  --color-texto-claro: #b0b0b0;
+  --color-borde: #2a2a2a;
+  --color-sombra: rgba(140, 131, 255, 0.2);
 }
