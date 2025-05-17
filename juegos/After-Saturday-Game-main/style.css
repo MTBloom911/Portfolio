@@ -1,0 +1,164 @@
+html{
+    font-family: 'Press Start 2P', system-ui;
+}
+
+.header{
+    text-align: center;
+    position: relative;   
+    width: 90%;
+}
+
+#title{
+    display: flex;
+    position: relative;
+    align-self: center;
+    justify-content: center;
+    padding: 20px;
+    height: 175px;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+}
+
+
+body{
+    background-image: url(./images/fondo.jpg);
+}
+
+#board{
+    background-image: url(./images/board.png);
+    height: 720px;
+    width: 720px;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+#player{
+    height: 72px;
+    width: 72px;
+    position:absolute;
+    background-image: url(./images/domingo.png);
+    top: 324px;
+    left: 324px;
+}
+
+#enemyY{
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    background-image: url(./images/html.png);
+}
+
+#enemyX{
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    background-image: url(./images/CSS.png);
+}
+
+.life {
+    position: absolute;
+    height: 41px;
+    width: 41px;
+    background-image: url(./images/corazon.png);
+    margin-left: 10px;
+    opacity: 1;
+}
+
+#gameover{
+    background-image: url(./images/gameover.png);
+    height: 720px;
+    width: 720px;
+    margin: auto;
+    position: absolute;
+    opacity: 0;
+}
+
+#startscreen{
+    background-image: url(./images/fondo.jpg);
+    height: 720px;
+    width: 720px;
+    margin: 0;
+    position: absolute;
+    opacity: 1;
+    text-align: justify;
+    color: white;
+    font-size: 26px;
+    line-height:1.2em;
+}
+
+#wasd img{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#java{
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    background-image: url(./images/javaScript.png);
+}
+
+#count{
+    
+    height: 35px;
+    width: 716px;
+    text-align: end;
+    padding-top: 25px;
+    position: absolute;
+    opacity: 0;
+}
+
+#myBtn {
+    background-color: antiquewhite;
+    position: absolute;
+    top: 350px;
+    height: 60px;
+    width: 110px;
+    opacity: 1;
+    text-align: center;
+    border-radius: 20px;
+    display: visible;
+    font-family: 'Press Start 2P', system-ui;
+}
+#myBtn:hover{
+    background-color: rgb(34, 190, 73);
+}
+
+#restart {
+    position: absolute;
+    top: 490px;
+    left: 300px;
+    height: 60px;
+    width: 120px;
+    opacity: 1;
+    background-color: rgb(6, 9, 26);
+    color: aliceblue;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'Press Start 2P', system-ui;
+}
+
+#restart:hover{
+    background-color: rgb(229, 14, 14);
+}
+
+
+.visible{
+    display:visible;
+}
+
+footer{
+    width: 100vw;
+    
+}
+.credits {
+    text-align: center;
+    width: 100vw;
+    color: white;
+    font-size: 60%;
+    padding-top: 2%;
+}
